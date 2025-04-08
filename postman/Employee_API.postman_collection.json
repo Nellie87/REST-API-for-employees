@@ -1,0 +1,63 @@
+{
+    "info": {
+      "name": "Employee Management API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Employees",
+        "request": {
+          "method": "GET",
+          "url": "http://localhost:8080/employees"
+        }
+      },
+      {
+        "name": "Get Employee by ID",
+        "request": {
+          "method": "GET",
+          "url": "http://localhost:8080/employees/1"
+        }
+      },
+      {
+        "name": "Create New Employee",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": "http://localhost:8080/employees",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"position\": \"Software Engineer\",\n    \"salary\": 75000.00\n}"
+          }
+        }
+      },
+      {
+        "name": "Update Employee",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "url": "http://localhost:8080/employees/1",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"John Updated\",\n    \"email\": \"john.updated@example.com\",\n    \"position\": \"Senior Software Engineer\",\n    \"salary\": 85000.00\n}"
+          }
+        }
+      },
+      {
+        "name": "Delete Employee",
+        "request": {
+          "method": "DELETE",
+          "url": "http://localhost:8080/employees/1"
+        }
+      }
+    ]
+  }
